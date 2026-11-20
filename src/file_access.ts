@@ -1,4 +1,6 @@
-export class FileAccess {
+import { IFileAccess } from "./file_access_interface.ts";
+
+export class FileAccess implements IFileAccess {
   constructor(private path: string) {}
 
   public async readNumbers(): Promise<Array<number>> {
